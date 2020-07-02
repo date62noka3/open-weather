@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.openweather"
-        minSdkVersion 19
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -21,6 +21,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    //Retrofit2のNoSuchMethodError対策
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
+    //Retrofit2のNoSuchMethodError対策
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 
