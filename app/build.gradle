@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt' //アノテーションを使えるようにする
 
 android {
     compileSdkVersion 29
 
     defaultConfig {
         applicationId "com.example.openweather"
-        minSdkVersion 19
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -21,6 +22,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    //Retrofit2のNoSuchMethodError対策
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //Retrofit2のNoSuchMethodError対策
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {
@@ -33,4 +45,20 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
+    //Retrofit2 : GETする
+    def retrofitVer = '2.9.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVer" //APIをKotlinインターフェースに変換
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVer"
+
+    //Moshi : JsonをKotlinクラスに変換
+    def moshiVer = '1.9.3'
+    implementation "com.squareup.moshi:moshi:$moshiVer" //Jsonパース
+    implementation "com.squareup.moshi:moshi-adapters:$moshiVer"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshiVer"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshiVer" //アノテーションでコード生成
+
+    //Coroutine : 非同期処理
+    def coroutineVer = '1.3.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVer"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVer"
 }
