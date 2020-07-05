@@ -49,6 +49,7 @@ dependencies {
     def retrofitVer = '2.9.0'
     implementation "com.squareup.retrofit2:retrofit:$retrofitVer" //APIをKotlinインターフェースに変換
     implementation "com.squareup.retrofit2:converter-moshi:$retrofitVer"
+    implementation 'com.squareup.retrofit2:converter-simplexml:2.7.1' //XmlをKotlinクラスに変換
 
     //Moshi : JsonをKotlinクラスに変換
     def moshiVer = '1.9.3'
