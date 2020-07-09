@@ -1,7 +1,6 @@
 package com.example.openweather.repository
 
 import android.util.Log
-import com.example.openweather.model.Prefecture
 import com.github.kittinunf.fuel.httpGet
 import com.github.kittinunf.result.Result
 import java.nio.charset.Charset
@@ -35,15 +34,15 @@ class AreaRepos {
     /*
     * 都道府県名、市町村名とIDのセットを抽出
     *
-    * @return 都道府県リスト
+    * @return 都道府県リスト Map<都道府県名, 市町村<市町村名, ID>>
     * */
-    fun createArea(): List<Prefecture>? {
+    fun createArea(): Map<String, Map<String, String>>? {
         responseData ?: return null
 
         //都道府県ごとに抽出
         val prefectures: List<String> = prefRegex.findAll(responseData!!).map { it.value }.toList()
 
-        val area = mutableListOf<Prefecture>()
+        val area = mutableMapOf<String, Map<String, String>>()
         for (x in prefectures) {
             val prefName: String = prefNameRegex.find(x)!!.value
                 .replace("<pref title=\"", "")
@@ -60,12 +59,7 @@ class AreaRepos {
                         value.substring(value.length - 6, value.length)
             }.toMap()
 
-            area.add(
-                Prefecture(
-                    prefName,
-                    cities.map { Prefecture.City(it.key, it.value) }.toList()
-                )
-            )
+            area[prefName] = cities
         }
 
         return area
