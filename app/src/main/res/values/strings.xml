@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">OpenWeather</string>
+
+    <string name="area_label">エリア</string>
+    <string name="pref_label">都道府県</string>
+    <string name="city_label">市町村</string>
+
+    <string name="date_label_today">今日</string>
+    <string name="date_label_2day">明日</string>
+    <string name="date_label_3day">明後日</string>
+
+    <string name="weather_image_description">天気アイコン</string>
 </resources>
