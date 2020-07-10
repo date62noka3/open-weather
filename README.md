@@ -4,7 +4,7 @@
 (取得できない時間帯があります。)  
 
 # DEMO
-![open_weather](https://user-images.githubusercontent.com/61310801/87106804-36005e00-c299-11ea-94c6-6fab20d39559.gif)
+![open_weather](https://user-images.githubusercontent.com/61310801/87107131-ef5f3380-c299-11ea-8811-6f9f10f4b5fc.gif)
 
 # Description
 ポートフォリオ(名刺図鑑)はKotlinを触り始めてちょっとしたときに開発したものです。  
