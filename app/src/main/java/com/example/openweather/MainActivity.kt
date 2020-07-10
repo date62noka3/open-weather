@@ -8,6 +8,7 @@ import androidx.core.view.children
 import com.example.openweather.model.Weather
 import com.example.openweather.repository.AreaRepos
 import com.example.openweather.repository.WeatherRepos
+import com.example.openweather.utils.UrlImageGetTask
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -74,7 +75,11 @@ class MainActivity : AppCompatActivity() {
                     weather.forecasts.forEachIndexed { i, forecast ->
                         val weatherLinear = weatherTable.children.elementAt(i) as LinearLayout
 
-                        //TODO : display weather image
+                        //天気アイコン
+                        val urlImageGetTask = UrlImageGetTask(
+                            weatherLinear.children.elementAt(WeatherContainerViews.weatherImage) as ImageView
+                        )
+                        urlImageGetTask.execute(forecast.image.url)
 
                         //天気
                         (weatherLinear.children.elementAt(WeatherContainerViews.telopText) as TextView)

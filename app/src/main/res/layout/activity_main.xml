@@ -105,19 +105,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:contentDescription="@string/weather_image_description"
-                    android:paddingTop="10dp"
+                    android:padding="18dp"
                     android:paddingBottom="8dp"
-                    android:scaleType="fitCenter"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    app:srcCompat="@drawable/picture" />
 
                 <TextView
                     android:id="@+id/telopText"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:text="曇り"
+                    android:layout_height="40dp"
+                    android:gravity="top"
+                    android:text="ー"
                     android:textAlignment="center"
                     android:textColor="@color/textColor"
                     android:textSize="20sp" />
@@ -129,7 +126,7 @@
                     android:layout_margin="10dp"
                     android:background="#FFE6E6"
                     android:gravity="center"
-                    android:text="26℃"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textColor="@color/maxTempText"
                     android:textSize="24sp"
@@ -142,7 +139,7 @@
                     android:layout_margin="8dp"
                     android:background="#E6E6FF"
                     android:gravity="center"
-                    android:text="15℃"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textColor="@color/minTempText"
                     android:textSize="24sp"
@@ -172,19 +169,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:contentDescription="@string/weather_image_description"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="8dp"
-                    android:scaleType="fitCenter"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    android:padding="18dp"
+                    app:srcCompat="@drawable/picture" />
 
                 <TextView
                     android:id="@+id/telopText"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:text="曇り"
+                    android:layout_height="40dp"
+                    android:gravity="top"
+                    android:text="ー"
                     android:textAlignment="center"
                     android:textColor="@color/textColor"
                     android:textSize="20sp" />
@@ -196,7 +189,7 @@
                     android:layout_margin="10dp"
                     android:background="#FFE6E6"
                     android:gravity="center"
-                    android:text="26℃"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textColor="@color/maxTempText"
                     android:textSize="24sp"
@@ -209,7 +202,7 @@
                     android:layout_margin="8dp"
                     android:background="#E6E6FF"
                     android:gravity="center"
-                    android:text="15℃"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textColor="@color/minTempText"
                     android:textSize="24sp"
@@ -238,19 +231,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:contentDescription="@string/weather_image_description"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="8dp"
-                    android:scaleType="fitCenter"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    android:padding="18dp"
+                    app:srcCompat="@drawable/picture" />
 
                 <TextView
                     android:id="@+id/telopText"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
-                    android:text="曇り"
+                    android:layout_height="40dp"
+                    android:gravity="top"
+                    android:text="ー"
                     android:textAlignment="center"
                     android:textColor="@color/textColor"
                     android:textSize="20sp" />
@@ -262,7 +251,7 @@
                     android:layout_margin="10dp"
                     android:background="#FFE6E6"
                     android:gravity="center"
-                    android:text="26℃"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textColor="@color/maxTempText"
                     android:textSize="24sp"
@@ -275,7 +264,7 @@
                     android:layout_margin="8dp"
                     android:background="#E6E6FF"
                     android:gravity="center"
-                    android:text="15℃"
+                    android:text="-"
                     android:textAlignment="center"
                     android:textColor="@color/minTempText"
                     android:textSize="24sp"
@@ -302,7 +291,7 @@
                     android:background="@drawable/description_bg"
                     android:padding="5dp"
                     android:scrollbars="vertical"
-                    android:text="TextView"
+                    android:text="・・・"
                     android:textColor="#303030"
                     android:textSize="16sp" />
             </LinearLayout>
